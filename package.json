@@ -1,10 +1,10 @@
 {
   "name": "react-tooling-lab",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "High experimental repo to set up smart development/production environment for React",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "webpack --progress --colors --watch"
+    "start": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -13,8 +13,11 @@
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate",
-    "webpack"
+    "webpack",
+    "eslint",
+    "babel",
+    "Live Reloading",
+    "Hot Module Replacement"
   ],
   "author": "Simon Nonnis (https://github.com/SimoNonnis)",
   "license": "MIT",
@@ -33,6 +36,7 @@
     "babel-preset-react": "^6.5.0",
     "eslint": "^2.9.0",
     "eslint-plugin-react": "^5.0.1",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   }
 }
