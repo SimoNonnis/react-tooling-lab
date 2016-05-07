@@ -1,17 +1,17 @@
 module.exports = {
-  entry: './src/index',
+  entry: {
+    bundle: './src/main.js'
+  },
   output: {
-    filename: 'bundle.js'
+    filename: './dist/[name].js'
   },
   devtool: 'source-map',
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react']
-        }
+        test: /\.js$/, // ←Test for ".js" file, if it passes, use the loader
+        exclude: /node_modules/,
+        loader: 'babel' // ←use babel (short for ‘babel-loader’)
       }
     ]
   }
