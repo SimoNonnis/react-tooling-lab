@@ -1,14 +1,14 @@
 {
-  "name": "react-tooling-lab",
-  "version": "0.0.3",
-  "description": "High experimental repo to set up smart development/production environment for React",
+  "name": "react-webpack-lab",
+  "version": "0.0.5",
+  "description": "High experimental repo to set up smart development/production environment for React using Webpack",
   "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SimoNonnis/react-tooling-lab.git"
+    "url": "git+https://github.com/SimoNonnis/react-webpack-lab.git"
   },
   "keywords": [
     "react",
@@ -22,9 +22,9 @@
   "author": "Simon Nonnis (https://github.com/SimoNonnis)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SimoNonnis/react-tooling-lab/issues"
+    "url": "https://github.com/SimoNonnis/react-webpack-lab/issues"
   },
-  "homepage": "https://github.com/SimoNonnis/react-tooling-lab#readme",
+  "homepage": "https://github.com/SimoNonnis/react-webpack-lab#readme",
   "dependencies": {
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
