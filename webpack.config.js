@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: './dist/[name].js'
   },
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   module: {
     loaders: [
       {
