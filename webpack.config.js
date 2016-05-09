@@ -9,9 +9,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/, // ←Test for ".js" file, if it passes, use the loader
+        test: /\.js$/, // ← Test for ".js" file, if it passes, use the loader
         exclude: /node_modules/,
-        loader: 'babel' // ←use babel (short for ‘babel-loader’) loads collection of ES6 transforms and JSX for react from babelrc file
+        loader: 'babel' // ← Use babel (short for ‘babel-loader’) loads collection of ES6 transforms, JSX for react etc.. from .babelrc file
       }
     ]
   }

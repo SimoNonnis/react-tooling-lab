@@ -4,7 +4,8 @@
   "description": "High experimental repo to set up smart development/production environment for React using Webpack",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --hot"
+    "start": "webpack-dev-server --inline --hot",
+    "clean": "rm -rf dist/*"
   },
   "repository": {
     "type": "git",
