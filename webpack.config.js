@@ -11,7 +11,7 @@ module.exports = {
       {
         test: /\.js$/, // ←Test for ".js" file, if it passes, use the loader
         exclude: /node_modules/,
-        loader: 'babel' // ←use babel (short for ‘babel-loader’)
+        loader: 'babel' // ←use babel (short for ‘babel-loader’) loads collection of ES6 transforms and JSX for react from babelrc file
       }
     ]
   }
