@@ -5,7 +5,7 @@
   output: {
     filename: './dist/[name].js'
   },
-  devtool: 'cheap-module-source-map',
+  devtool: 'eval-source-map',
   module: {
     loaders: [
       {
