@@ -1,4 +1,4 @@
-module.exports = {
+ const config = {
   entry: {
     bundle: './src/main.js'
   },
@@ -16,3 +16,5 @@ module.exports = {
     ]
   }
 };
+
+module.exports = config;
