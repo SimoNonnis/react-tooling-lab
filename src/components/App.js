@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './global.css';
 
 
 const App = () => (
   <div>
-      <h1>I love React</h1>
-      <p>A lot really</p>
+      <h1 className="title">I love React</h1>
+      <p>A lot really!</p>
   </div>
 );
 
