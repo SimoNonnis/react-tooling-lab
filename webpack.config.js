@@ -1,4 +1,6 @@
- const config = {
+var autoprefixer = require('autoprefixer');
+
+const config = {
   entry: {
     bundle: './src/main.js'
   },
@@ -15,10 +17,11 @@
       },
       {
         test: /\.css$/,
-        loader: 'style!css!autoprefixer!' // ← loaders working right to left
+        loader: 'style!css!postcss' // ← loaders working right to left
       }
     ]
-  }
+  },
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
 };
 
 module.exports = config;
