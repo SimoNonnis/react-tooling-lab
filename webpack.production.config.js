@@ -13,7 +13,7 @@ const config = {
        loader: 'babel' // ← Use babel (short for ‘babel-loader’) loads collection of ES6 transforms, JSX for react etc.. from .babelrc file
      },
      {
-       test: /\.css$/,
+       test: /\.css$/, // ← Test for ".css" file, if it passes, use the loader
        loader: 'style!css!postcss' // ← loaders working right to left
      }
    ]
