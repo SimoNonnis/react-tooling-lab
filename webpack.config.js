@@ -21,9 +21,9 @@ const config = {
         test: /\.css$/, // ← Test for ".css" file, if it passes, use the loader
         loaders: [
           'style',
-          'css',
+          'css?modules&localIdentName=[name]__[local]____[hash:base64:5]',
           'postcss'
-        ] // ← loaders working bottom to top 
+        ] // ← loaders working bottom to top
       }
     ]
   },
