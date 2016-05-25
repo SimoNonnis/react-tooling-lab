@@ -1,4 +1,5 @@
-var autoprefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer');
+const validate = require('webpack-validator');
 
 const config = {
   entry: {
@@ -30,4 +31,4 @@ const config = {
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
 };
 
-module.exports = config;
+module.exports = validate(config);

@@ -1,4 +1,5 @@
 var autoprefixer = require('autoprefixer');
+const validate = require('webpack-validator');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const config = {
@@ -31,4 +32,4 @@ const config = {
   ]
 };
 
-module.exports = config;
+module.exports = validate(config);
