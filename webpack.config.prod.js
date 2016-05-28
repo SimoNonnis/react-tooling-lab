@@ -1,7 +1,9 @@
-var autoprefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer');
 const validate = require('webpack-validator');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+const extractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
+const webpack = require('webpack');
+
 
 const config = {
   entry: {
@@ -10,6 +12,7 @@ const config = {
   output: {
     filename: './dist/[name].js'
   },
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -33,7 +36,17 @@ const config = {
   },
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
   plugins: [
-    new ExtractTextPlugin('./dist/main.min.css')
+    new extractTextPlugin('./dist/main.min.css'),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ]
 };
 
