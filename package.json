@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-lab",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "High experimental repo to set up smart development/production environment for React using Webpack",
   "main": "src/index.js",
   "scripts": {
