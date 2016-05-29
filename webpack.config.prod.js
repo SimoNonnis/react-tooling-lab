@@ -5,12 +5,14 @@ const path = require('path');
 const webpack = require('webpack');
 
 
+
 const config = {
   entry: {
-    bundle: './src/main.js'
+    vendor: ['react', 'react-dom'],
+    app: './src/main.js'
   },
   output: {
-    filename: './dist/[name].js'
+    filename: './dist/[name].[chunkhash].js'
   },
   devtool: 'source-map',
   module: {
@@ -22,8 +24,8 @@ const config = {
       },
       {
         test: /\.css$/, // ← Test for ".css" file, if it passes, use the loader
-        include: [ path.resolve(__dirname, 'src/components') ],
-        loader: ExtractTextPlugin.extract(
+        include: /src/,
+        loader: extractTextPlugin.extract(
           'css?modules&localIdentName=[name]__[local]____[hash:base64:5]!postcss' // ← loaders working right to left. ExtractTextPlugin requires use of ! syntax.
         )
       },
@@ -42,11 +44,16 @@ const config = {
         warnings: false
       }
     }),
-    new webpack.DefinePlugin({
+    new webpack.DefinePlugin({ // ← optimize the react bundle for production
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
-    })
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: Infinity // ← just creates the commons chunk, but no modules into it
+    }),
+    new webpack.optimize.OccurenceOrderPlugin()
   ]
 };
 

@@ -4,7 +4,7 @@ const path = require('path');
 
 const config = {
   entry: {
-    bundle: './src/main.js'
+    app: './src/main.js'
   },
   output: {
     filename: './dist/[name].js'
@@ -19,7 +19,7 @@ const config = {
       },
       {
         test: /\.css$/, // ← Test for ".css" file, if it passes, use the loader
-        include: [ path.resolve(__dirname, 'src/components') ],
+        include: /src/,
         loaders: [
           'style',
           'css?modules&localIdentName=[name]__[local]____[hash:base64:5]',
