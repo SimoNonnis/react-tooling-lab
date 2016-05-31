@@ -2,6 +2,10 @@ const autoprefixer = require('autoprefixer');
 const validate = require('webpack-validator');
 const path = require('path');
 
+
+
+
+
 const config = {
   entry: {
     app: './src/main.js'
@@ -30,6 +34,13 @@ const config = {
         test: /\.(jpg|png|gif)$/,
         include: [ path.resolve(__dirname, 'src/images') ],
         loader: 'url?limit=25000'
+      },
+      {
+        test: /\.svg$/,
+        include: [ path.resolve(__dirname, 'src/images/svg') ],
+        loaders: [
+          'file'
+        ]
       }
     ]
   },

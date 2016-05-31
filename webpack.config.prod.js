@@ -6,6 +6,8 @@ const webpack = require('webpack');
 
 
 
+
+
 const config = {
   entry: {
     vendor: ['react', 'react-dom'],
@@ -33,6 +35,13 @@ const config = {
         test: /\.(jpg|png|gif)$/,
         include: [ path.resolve(__dirname, 'src/images') ],
         loader: 'url?limit=25000'
+      },
+      {
+        test: /\.svg$/,
+        include: [ path.resolve(__dirname, 'src/images/svg') ],
+        loaders: [
+          'file'
+        ]
       }
     ]
   },
