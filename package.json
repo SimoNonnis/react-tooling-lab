@@ -1,6 +1,6 @@
 {
   "name": "react-webpack-lab",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "description": "High experimental repo to set up smart development/production environment for React using Webpack",
   "main": "src/main.js",
   "scripts": {
@@ -20,6 +20,7 @@
     "css-modules",
     "babel",
     "postcss",
+    "web-font-loader"
     "Hot Module Replacement"
   ],
   "author": "Simon Nonnis (https://github.com/SimoNonnis)",
