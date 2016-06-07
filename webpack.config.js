@@ -15,6 +15,13 @@ const config = {
   },
   devtool: 'eval-source-map',
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        include: /src/,
+        loaders: ['eslint']
+      }
+    ],
     loaders: [
       {
         test: /\.js$/, // ← Test for ".js" file, if it passes, use the loader

@@ -1,6 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const validate = require('webpack-validator');
-const extractTextPlugin = require("extract-text-webpack-plugin");
+const extractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -18,6 +18,13 @@ const config = {
   },
   devtool: 'source-map',
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        include: /src/,
+        loaders: ['eslint']
+      }
+    ],
     loaders: [
       {
         test: /\.js$/, // ← Test for ".js" file, if it passes, use the loader
