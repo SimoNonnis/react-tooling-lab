@@ -1,17 +1,15 @@
 {
   "name": "react-webpack-lab",
-  "version": "0.2.1",
   "description": "High experimental repo to set up smart development/production environment for React using Webpack",
+  "author": "Simon Nonnis (https://github.com/SimoNonnis)",
+  "version": "0.2.1",
+  "license": "MIT",
   "main": "src/main.js",
   "scripts": {
     "start": "webpack-dev-server --inline --hot",
     "build": "mkdir -p ./dist && npm run clean && webpack -p --config webpack.config.prod.js",
     "clean": "rm -rf ./dist/*",
     "stats": "webpack --profile --json > stats.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SimoNonnis/react-webpack-lab"
   },
   "keywords": [
     "react",
@@ -25,12 +23,14 @@
     "eslint",
     "eslint-loader"
   ],
-  "author": "Simon Nonnis (https://github.com/SimoNonnis)",
-  "license": "MIT",
+  "homepage": "https://github.com/SimoNonnis/react-webpack-lab#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimoNonnis/react-webpack-lab"
+  },
   "bugs": {
     "url": "https://github.com/SimoNonnis/react-webpack-lab/issues"
   },
-  "homepage": "https://github.com/SimoNonnis/react-webpack-lab#readme",
   "dependencies": {
     "babel-runtime": "^6.6.1",
     "react": "^15.0.2",

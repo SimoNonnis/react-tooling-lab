@@ -17,7 +17,7 @@ const config = {
   module: {
     preLoaders: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         include: /src/,
         loaders: ['eslint']
       }
