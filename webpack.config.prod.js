@@ -5,6 +5,30 @@ const path = require('path');
 const webpack = require('webpack');
 
 
+// plugins
+// create css file
+const createCssFile = new extractTextPlugin('./dist/main.min.css');
+// kill uglify warnings
+const killUglifyJsWarnings = new webpack.optimize.UglifyJsPlugin({
+  compress: {
+    warnings: false
+  }
+});
+// optimize the react bundle for production
+const optimizeReactForProduction = new webpack.DefinePlugin({
+  'process.env': {
+    'NODE_ENV': JSON.stringify('production')
+  }
+});
+// common chunks
+const commonChunks = new webpack.optimize.CommonsChunkPlugin({
+  name: 'vendor',
+  minChunks: Infinity // ← just creates the commons chunk, but no modules into it
+});
+// OccurenceOrderPlugin
+const occurenceOrder = new webpack.optimize.OccurenceOrderPlugin();
+
+
 
 
 
@@ -49,23 +73,15 @@ const config = {
     ]
   },
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
+  resolve: {
+    extensions: ['', '.js']
+  },
   plugins: [
-    new extractTextPlugin('./dist/main.min.css'),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.DefinePlugin({ // ← optimize the react bundle for production
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: Infinity // ← just creates the commons chunk, but no modules into it
-    }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    createCssFile,
+    killUglifyJsWarnings,
+    optimizeReactForProduction,
+    commonChunks,
+    occurenceOrder
   ]
 };
 

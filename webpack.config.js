@@ -47,7 +47,10 @@ const config = {
       }
     ]
   },
-  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
+  resolve: {
+    extensions: ['', '.js'] 
+  }
 };
 
 module.exports = validate(config);
