@@ -1,5 +1,18 @@
+:root {
+  --mainColor: greenyellow;
+  --mobileColor: orangered;
+}
+
+
 html {
-  background-color: greenyellow;
+  background-color: var(--mainColor);
+  display: flex;
+}
+
+@media (width >= 31em) and (width <= 62.5em) {
+  html {
+    background-color: var(--mobileColor);
+  }
 }
 
 .title {

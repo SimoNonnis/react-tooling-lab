@@ -1,4 +1,3 @@
-const autoprefixer = require('autoprefixer');
 const validate = require('webpack-validator');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
@@ -72,7 +71,10 @@ const config = {
       }
     ]
   },
-  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
+  postcss: [
+    require('postcss-cssnext')(),
+    require('postcss-reporter')()
+  ],
   resolve: {
     extensions: ['', '.js']
   },
