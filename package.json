@@ -18,6 +18,7 @@
     "css-modules",
     "babel",
     "postcss",
+    "postcss-cssnext",
     "web-font-loader",
     "Hot Module Replacement",
     "eslint",

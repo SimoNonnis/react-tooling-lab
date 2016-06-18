@@ -1,21 +1,37 @@
+
+/* Variables
+   ========================================================================== */
+
 :root {
   --mainColor: greenyellow;
   --mobileColor: orangered;
+
 }
 
+
+/* Custom @media
+   ========================================================================== */
+
+@custom-media --tablet (width >= 31em) and (width <= 62.5em);
+
+
+
+/* Style
+   ========================================================================== */
 
 html {
   background-color: var(--mainColor);
-  display: flex;
+  font-family: 'Lato';
+  font-weight: 300;
 }
 
-@media (width >= 31em) and (width <= 62.5em) {
+@media (--tablet) {
   html {
     background-color: var(--mobileColor);
   }
 }
 
 .title {
-  font-family: 'Droid Sans';
   text-transform: uppercase;
+  font-size: 2rem;
 }
