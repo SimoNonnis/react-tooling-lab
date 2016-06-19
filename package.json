@@ -7,8 +7,9 @@
   "main": "src/main.js",
   "scripts": {
     "start": "webpack-dev-server --inline --hot",
-    "build": "mkdir -p ./dist && npm run clean && webpack -p --config webpack.config.prod.js",
     "clean": "rm -rf ./dist/*",
+    "prebuild": "mkdir -p ./dist && npm run clean",
+    "build": "webpack -p --config webpack.config.prod.js",
     "stats": "webpack --profile --json > stats.json"
   },
   "keywords": [
