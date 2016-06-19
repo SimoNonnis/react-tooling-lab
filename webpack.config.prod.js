@@ -1,7 +1,9 @@
-const validate = require('webpack-validator');
 const extractTextPlugin = require('extract-text-webpack-plugin');
-const path = require('path');
+const styleLintPlugin = require('stylelint-webpack-plugin');
+const validate = require('webpack-validator');
 const webpack = require('webpack');
+const path = require('path');
+
 
 
 // plugins
@@ -26,7 +28,8 @@ const commonChunks = new webpack.optimize.CommonsChunkPlugin({
 });
 // OccurenceOrderPlugin
 const occurenceOrder = new webpack.optimize.OccurenceOrderPlugin();
-
+// Lint Css
+const cssStyleLint = new styleLintPlugin();
 
 
 
@@ -83,7 +86,8 @@ const config = {
     killUglifyJsWarnings,
     optimizeReactForProduction,
     commonChunks,
-    occurenceOrder
+    occurenceOrder,
+    cssStyleLint
   ]
 };
 

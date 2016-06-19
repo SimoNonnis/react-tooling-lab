@@ -1,4 +1,5 @@
 const validate = require('webpack-validator');
+const styleLintPlugin = require('stylelint-webpack-plugin');
 const path = require('path');
 
 
@@ -52,7 +53,10 @@ const config = {
    ],
   resolve: {
     extensions: ['', '.js']
-  }
+  },
+  plugins: [
+    new styleLintPlugin({context: ''})
+  ]
 };
 
 module.exports = validate(config);
