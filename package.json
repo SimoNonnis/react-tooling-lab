@@ -23,7 +23,8 @@
     "web-font-loader",
     "Hot Module Replacement",
     "eslint",
-    "eslint-loader"
+    "eslint-loader",
+    "stylelint"
   ],
   "homepage": "https://github.com/SimoNonnis/react-webpack-lab#readme",
   "repository": {

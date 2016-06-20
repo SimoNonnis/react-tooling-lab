@@ -12,6 +12,7 @@ const createCssFile = new extractTextPlugin('./dist/main.min.css');
 // kill uglify warnings
 const killUglifyJsWarnings = new webpack.optimize.UglifyJsPlugin({
   compress: {
+    screw_ie8: true,
     warnings: false
   }
 });
