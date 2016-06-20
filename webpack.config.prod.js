@@ -29,7 +29,7 @@ const commonChunks = new webpack.optimize.CommonsChunkPlugin({
 // OccurenceOrderPlugin
 const occurenceOrder = new webpack.optimize.OccurenceOrderPlugin();
 // Lint Css
-const cssStyleLint = new styleLintPlugin();
+const cssStyleLint = new styleLintPlugin({files: '**/*.css'});
 
 
 
