@@ -1,4 +1,5 @@
 const styleLintPlugin = require('stylelint-webpack-plugin');
+var htmlWebpackPlugin = require('html-webpack-plugin');
 const validate = require('webpack-validator');
 const path = require('path');
 
@@ -6,6 +7,10 @@ const path = require('path');
 // plugins
 // Lint Css
 const cssStyleLint = new styleLintPlugin({files: '**/*.css'});
+// htmlPlugin
+const htmlPlugin = new htmlWebpackPlugin({
+  template: './index.html'
+});
 
 
 const config = {
@@ -57,7 +62,8 @@ const config = {
     extensions: ['', '.js']
   },
   plugins: [
-    cssStyleLint
+    cssStyleLint,
+    htmlPlugin
   ]
 };
 

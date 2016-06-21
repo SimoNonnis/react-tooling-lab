@@ -2,7 +2,7 @@
   "name": "react-webpack-lab",
   "description": "High experimental repo to set up smart development/production environment for React using Webpack",
   "author": "Simon Nonnis (https://github.com/SimoNonnis)",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "license": "MIT",
   "main": "src/main.js",
   "scripts": {
@@ -21,10 +21,11 @@
     "postcss",
     "postcss-cssnext",
     "web-font-loader",
-    "Hot Module Replacement",
+    "hot-module-replacement",
     "eslint",
     "eslint-loader",
-    "stylelint"
+    "stylelint",
+    "html-webpack-plugin"
   ],
   "homepage": "https://github.com/SimoNonnis/react-webpack-lab#readme",
   "repository": {
@@ -51,6 +52,7 @@
     "eslint-plugin-react": "^5.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.21.0",
     "image-webpack-loader": "^1.8.0",
     "postcss-cssnext": "^2.6.0",
     "postcss-loader": "^0.9.1",

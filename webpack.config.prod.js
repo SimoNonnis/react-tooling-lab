@@ -1,5 +1,6 @@
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const styleLintPlugin = require('stylelint-webpack-plugin');
+var htmlWebpackPlugin = require('html-webpack-plugin');
 const validate = require('webpack-validator');
 const webpack = require('webpack');
 const path = require('path');
@@ -8,7 +9,7 @@ const path = require('path');
 
 // plugins
 // create css file
-const createCssFile = new extractTextPlugin('./dist/main.min.css');
+const createCssFile = new extractTextPlugin('./main.min.css');
 // kill uglify warnings
 const killUglifyJsWarnings = new webpack.optimize.UglifyJsPlugin({
   compress: {
@@ -31,6 +32,10 @@ const commonChunks = new webpack.optimize.CommonsChunkPlugin({
 const occurenceOrder = new webpack.optimize.OccurenceOrderPlugin();
 // Lint Css
 const cssStyleLint = new styleLintPlugin({files: '**/*.css'});
+// htmlPlugin
+const htmlPlugin = new htmlWebpackPlugin({
+  template: './index.html'
+});
 
 
 
@@ -41,7 +46,8 @@ const config = {
     app: './src/main.js'
   },
   output: {
-    filename: './dist/[name].[chunkhash].js'
+    path: 'dist',
+    filename: './[name].[chunkhash].js'
   },
   devtool: 'source-map',
   module: {
@@ -88,7 +94,8 @@ const config = {
     optimizeReactForProduction,
     commonChunks,
     occurenceOrder,
-    cssStyleLint
+    cssStyleLint,
+    htmlPlugin
   ]
 };
 
