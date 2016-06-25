@@ -20,6 +20,13 @@
     "no-indistinguishable-colors": true,
     "no-invalid-double-slash-comments": true,
     "no-unknown-animations": true,
-    "number-leading-zero": "never"
+    "number-leading-zero": "never",
+    "property-case": "lower",
+    "root-no-standard-properties": true,
+    "selector-attribute-brackets-space-inside": "always",
+    "selector-attribute-operator-space-after": "never",
+    "selector-attribute-operator-space-before": "never",
+    "selector-combinator-space-after": "always",
+    "selector-combinator-space-before": "always"
   }
 }
