@@ -27,6 +27,15 @@
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
     "selector-combinator-space-after": "always",
-    "selector-combinator-space-before": "always"
+    "selector-combinator-space-before": "always",
+    "selector-list-comma-newline-after": "always",
+    "selector-max-empty-lines": 0,
+    "selector-pseudo-class-case": "lower",
+    "selector-pseudo-class-parentheses-space-inside": "always",
+    "selector-pseudo-element-case": "lower",
+    "selector-root-no-composition": true,
+    "selector-type-case": "lower",
+    "string-quotes": "single",
+    "value-keyword-case": "lower"
   }
 }
