@@ -55,6 +55,7 @@ const config = {
     ]
   },
   postcss: [
+    require('postcss-easy-import')(),
     require('postcss-cssnext')(),
     require('postcss-reporter')()
    ],
