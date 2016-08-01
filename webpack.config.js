@@ -65,7 +65,12 @@ const config = {
   plugins: [
     cssStyleLint,
     htmlPlugin
-  ]
+  ],
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  }
 };
 
 module.exports = validate(config);
