@@ -2,7 +2,7 @@
   "name": "react-webpack-lab",
   "description": "High experimental repo to set up smart development/production environment for React using Webpack",
   "author": "Simon Nonnis (https://github.com/SimoNonnis)",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "license": "MIT",
   "main": "src/main.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "prebuild": "mkdir -p ./dist && npm run clean",
     "build": "webpack -p --config webpack.config.prod.js",
     "stats": "webpack --profile --json > stats.json",
-    "test": "mocha --require setup.js --recursive './src/test/*.test.js' --compilers js:babel-core/register --require ignore-styles "
+    "test": "NODE_ENV=test mocha --require './src/test/setup.js' --recursive './src/test/*.test.js' --compilers js:babel-core/register --require ignore-styles"
   },
   "keywords": [
     "react",
