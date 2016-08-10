@@ -8,8 +8,9 @@
   "scripts": {
     "start": "webpack-dev-server --inline --hot",
     "clean": "rm -rf ./dist/*",
-    "prebuild": "mkdir -p ./dist && npm run clean",
+    "prebuild": "mkdir -p ./dist && npm run clean && cp favicon.ico ./dist",
     "build": "webpack -p --config webpack.config.prod.js",
+    "postbuild": "http-server ./dist -p 8081 -d false --cors -o -c-1",
     "stats": "webpack --profile --json > stats.json",
     "test": "NODE_ENV=test mocha --require './src/test/setup.js' --recursive './src/test/*.test.js' --compilers js:babel-core/register --require ignore-styles"
   },
@@ -26,7 +27,8 @@
     "eslint",
     "eslint-loader",
     "stylelint",
-    "html-webpack-plugin"
+    "html-webpack-plugin",
+    "http-server"
   ],
   "homepage": "https://github.com/SimoNonnis/react-webpack-lab#readme",
   "repository": {
@@ -57,6 +59,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.21.0",
+    "http-server": "^0.9.0",
     "ignore-styles": "^4.0.0",
     "image-webpack-loader": "^1.8.0",
     "jsdom": "^9.4.1",
