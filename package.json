@@ -2,7 +2,7 @@
   "name": "react-webpack-lab",
   "description": "High experimental repo to set up smart development/production environment for React using Webpack",
   "author": "Simon Nonnis (https://github.com/SimoNonnis)",
-  "version": "0.10.0",
+  "version": "0.15.0",
   "license": "MIT",
   "main": "src/main.js",
   "scripts": {
@@ -64,6 +64,7 @@
     "image-webpack-loader": "^1.8.0",
     "jsdom": "^9.4.1",
     "mocha": "^3.0.0",
+    "normalize.css": "^4.2.0",
     "postcss-cssnext": "^2.6.0",
     "postcss-easy-import": "^1.0.1",
     "postcss-loader": "^0.9.1",
