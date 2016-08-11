@@ -1,35 +1,8 @@
 @import 'normalize.css';
+@import './css-shared/variables.css';
+@import './css-shared/media-queries.css';
+@import './css-shared/global.css';
 
-/* Variables
-   ========================================================================== */
-
-:root {
-  --mainColor: greenyellow;
-  --mobileColor: orangered;
-
-}
-
-
-/* Custom @media queries
-   ========================================================================== */
-
-@custom-media --tablet (width >= 31em) and (width <= 62.5em);
-
-
-/* Style
-   ========================================================================== */
-
-html {
-  background-color: var(--mainColor);
-  font-family: 'Lato';
-  font-weight: 300;
-}
-
-@media (--tablet) {
-  html {
-    background-color: var(--mobileColor);
-  }
-}
 
 .title {
   text-transform: uppercase;
