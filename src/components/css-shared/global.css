@@ -2,11 +2,15 @@
 /* ==========================================================================
    Global
    ========================================================================== */
-
 html {
-  background-color: var(--mainColor);
-  font-family: 'Lato';
-  font-weight: 300;
+  background-color: var(--sky);
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 @media (--tablet) {
