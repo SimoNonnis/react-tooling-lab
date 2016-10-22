@@ -49,7 +49,6 @@ const config = {
     path: 'dist',
     filename: './[name].[chunkhash].js'
   },
-  devtool: 'source-map',
   module: {
     preLoaders: [
       {
