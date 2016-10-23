@@ -2,7 +2,7 @@
   "name": "react-webpack-lab",
   "description": "High experimental repo to set up smart development/production environment for React using Webpack",
   "author": "Simon Nonnis (https://github.com/SimoNonnis)",
-  "version": "0.15.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "src/main.js",
   "scripts": {
@@ -28,7 +28,8 @@
     "eslint-loader",
     "stylelint",
     "html-webpack-plugin",
-    "http-server"
+    "http-server",
+    "jest"
   ],
   "homepage": "https://github.com/SimoNonnis/react-webpack-lab#readme",
   "repository": {
@@ -79,8 +80,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "^.+\\.(css|less)$": "identity-obj-proxy"
+      "^.+\\.(css)$": "identity-obj-proxy"
     }
   }
 }

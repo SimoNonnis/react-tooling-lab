@@ -1,5 +1,4 @@
 import React from 'react';
-import { describe, beforeEach, it, expect } from 'jest';
 import { shallow } from 'enzyme';
 
 import App from '../components/App';
