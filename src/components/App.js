@@ -12,4 +12,4 @@ const App = () => (
 
 
 
-export default CSSModules(App, styles, {allowMultiple: true});
+export default CSSModules(App, styles, { allowMultiple: true });
