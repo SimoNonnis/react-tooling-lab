@@ -9,7 +9,7 @@ const path = require('path');
 
 // plugins
 // create css file
-const createCssFile = new extractTextPlugin('./main.min.css');
+const createCssFile = new extractTextPlugin('./main.[hash].min.css');
 // kill uglify warnings
 const killUglifyJsWarnings = new webpack.optimize.UglifyJsPlugin({
   compress: {
